@@ -1,6 +1,15 @@
 import Express, { application } from 'express';
+import { MongoClient } from 'mongodb';
+
+const connectionString = "mongodb+srv://admin:<password>@cluster0.lknzr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const client = MongoClient(connectionString,{
+    useNewUrlParser: true,
+    useUnifiedTopology: true, 
+});
+
 
 const app = Express();
+
 app.use(Express.json());
 
 app.get('/products',(req,res)=>{
