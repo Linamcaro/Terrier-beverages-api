@@ -13,6 +13,8 @@ var MongoDBUtil = require('./modules/mongodb/mongodb.module').MongoDBUtil;
 var ProductController = require('./modules/product/product.module')().ProductController;
 // Define the controllers of the application (User)
 var UserController = require('./modules/user/user.module')().UserController;
+// Define the controllers of the application (Order)
+var OrderController = require('./modules/order/order.module')().OrderController;
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -28,6 +30,8 @@ app.use(cors());
 app.use('/products', ProductController);
 // Path to consume the web service and controller process the request (users)
 app.use('/users', UserController);
+// Path to consume the web service and controller process the request (orders)
+app.use('/orders', OrderController);
 
 app.get('/', function (req, res) {
   var pkg = require(path.join(__dirname, 'package.json'));

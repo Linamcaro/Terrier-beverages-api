@@ -77,7 +77,7 @@
     // Method Get a user by id
     function getUserById(req, res, next) {
 
-        // Call service (Get a product by id)
+        // Call service (Get a user by id)
         UserService.fetchUserById(req.params.userId)
             .then(success)
             .catch(failure);
