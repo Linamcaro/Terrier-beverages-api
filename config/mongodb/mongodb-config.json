@@ -1,0 +1,8 @@
+{
+    "mongodb": {
+        "server": "cluster0.lknzr.mongodb.net",
+        "database": "online-store",
+        "user": "online_store_db_user",
+        "password": "alTPOZUC3GxqeWQq"
+    }
+}
