@@ -17,7 +17,7 @@
     // Method Add a Order
     function addOrder(req, res, next) {
         // Get order Values of the request body
-        const { code, total, registerDate, identification, name, salesman } = req.body;
+        const { code, total, registerdate, identification, name, salesman } = req.body;
         try{
             // Validate required fields
             if (!code) {
@@ -26,7 +26,7 @@
             else if(!total) {
                 throw new BadRequest('Missing required fields: Total');    
             }
-            else if(!registerDate) {
+            else if(!registerdate) {
                 throw new BadRequest('Missing required fields: Register Date');    
             }
             else if(!identification) {
@@ -99,7 +99,7 @@
     // Method Update a order by id
     function modifyOrder(req, res, next) {
         // Get order Values of the request body
-        const { code, total, registerDate, identification, name, salesman } = req.body;
+        const { code, total, registerdate, identification, name, salesman } = req.body;
         try{
             // Validate required fields
             if (!code) {
@@ -108,7 +108,7 @@
             else if(!total) {
                 throw new BadRequest('Missing required fields: Total');    
             }
-            else if(!registerDate) {
+            else if(!registerdate) {
                 throw new BadRequest('Missing required fields: Register Date');    
             }
             else if(!identification) {

@@ -12,8 +12,8 @@
             type: Number,
             required: true
         },
-        registerDate: {
-            type: Date,
+        registerdate: {
+            type: String,
             required: true
         },
         identification: {
